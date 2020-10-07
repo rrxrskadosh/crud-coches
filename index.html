@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Cars</title>
+    <!--LINK STYLES CSS-->
+    <link rel="stylesheet" href="./css/style.css">
+    <!--LINK STYLES BOOTSTRAP-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>CRUD Cars</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center m-2">LIST CARS MODELS 2017-2021</h1>
+    </div>
+
+    <div class="form-group d-flex justify-content-center">
+        <!--FORM #1 ID CARD-->
+        <form onsubmit="event.preventDefault(), submitCar()" action="/cars" class="w-50 mt-4">
+            <label for="name">Manufacturer</label>
+            <input type="text" id="manufacturer" class="form-control mb-4" placeholder="The Best Manufacturer" autocomplete="off">
+            <label for="name">Model</label>
+            <input type="text" id="model" class="form-control" placeholder="Add Model" autocomplete="off">
+
+             
+            <div class="row mt-4">
+        <!--ROW-COL #1-->
+                <div class="col-4">
+                    <label for="name">Color</label>
+                    <input type="text" id="color" class="form-control" placeholder="Here Color" autocomplete="off">
+                </div>
+        <!--ROW-COL #2-->
+                <div class="col-4">
+                    <label for="name">Year</label>
+                    <input type="text" id="year" class="form-control" placeholder="What Year" autocomplete="off">
+                </div>
+                <!--ROW-COL #3-->
+                <div class="col-4">
+                    <label for="name">Price</label>
+                    <input type="text" id="price" class="form-control" placeholder="Price $ Dollars" autocomplete="off">
+                </div>
+
+             </div>
+        </form>
+    </div>
+
+    <!--Buttons CRUD-->
+    <div class="d-flex justify-content-center">
+        <button onclick="submitCar() "type="submit" class="btn btn-primary">Submit</button>
+    </div>
+    
+    <!--Table Cars-->
+
+    <div class="container d-flex">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Manufacturer</th>
+                <th>Model</th>
+                <th>Color</th>
+                <th>Year</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody id="cars-table-body">
+            <!--Aquí van mis filas -->
+        </tbody>
+    </table>
+    </div>
+<script src="./js/main.js"></script>
+<script src="./js/cars.js"></script>
+</body>
+</html>
